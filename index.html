@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DigiCheck - Digital Forensics Tool</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">DigiCheck</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">Community</a>
+      </nav>
+      <button class="nav-btn">What can this site do →</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>This is a digital<br>forensics tool website<br><span>Upload the file</span></h1>
+      <p>The uploaded file will get analyzed and the report will be ready soon.</p>
+      <button class="upload-btn" onclick="document.getElementById('fileInput').click()">Upload File →</button>
+    </div>
+    <img src="images/Illustration.png" alt="Digital Forensics" class="hero-image" />
+  </section>
+
+  <section class="upload-section">
+    <div class="upload-box">
+      <h2>Upload any file</h2>
+      <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+        <p>Drag & Drop or <span class="choose">Choose file</span> to upload</p>
+        <p class="file-note">Any file up to 30MB</p>
+        <input type="file" id="fileInput" hidden />
+      </div>
+      <div class="file-info" id="fileInfo">No file selected.</div>
+      <div class="import-controls">
+        <button class="cancel" onclick="resetFile()">Cancel</button>
+        <button class="import" onclick="analyzeFile()">Analyze</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="analysis">
+    <h2>Analysis of the File</h2>
+    <div id="report" class="report-box">No analysis yet.</div>
+    <button class="back-btn" onclick="location.reload()">Back ←</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
